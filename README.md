@@ -241,7 +241,7 @@ A vulnerability in the Base Silo contract of Silo Finance allowed attackers to m
 
 ### Vulnerability Analysis
 
-The whitehat reported the vulnerability in the [Base](https://github.com/silo-finance/silo-core-v1/blob/master/contracts/BaseSilo.sol) Silo contract which is responsible for handling the core logic of the lending protocol. The Silo contract is a lending protocol which allows users to deposit collateral asset tokens to the contract by calling the `deposit()` function of the contract. In return, the contract mints the share of tokens to the depositor based on the deposited amount and the total supply of the share and updates the storage state `_assetStorage[_asset]` with the deposited amount:
+The whitehat reported the vulnerability in the [BaseSilo.sol](https://github.com/silo-finance/silo-core-v1/blob/master/contracts/BaseSilo.sol) contract which is responsible for handling the core logic of the lending protocol. The Silo contract is a lending protocol which allows users to deposit collateral asset tokens to the contract by calling the `deposit()` function of the contract. In return, the contract mints the share of tokens to the depositor based on the deposited amount and the total supply of the share and updates the storage state `_assetStorage[_asset]` with the deposited amount:
 
 ```solidity
        AssetStorage storage _state = _assetStorage[_asset];
